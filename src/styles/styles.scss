@@ -67,11 +67,13 @@ $fontBase: Roboto, sans-serif;
   @media screen and (min-width: 640px) {
     display: grid;
     grid-template-columns: 50% 50%;
+    row-gap: 10px;
   }
 
   @media screen and (min-width: 940px) {
     display: grid;
     grid-template-columns: 33% 33% 33%;
+    row-gap: 20px;
   }
 }
 
@@ -82,23 +84,11 @@ $fontBase: Roboto, sans-serif;
 }
 
 .box-input {
+  width: 95%;
   color: gray;
   border: 1px gray solid;
   border-radius: 5px;
   padding-left: 10px;
-}
-
-.box-select {
-  padding-left: 10px;
-}
-
-.box-select, .box-input {
-  width: 100%;
-  height: 40px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  font-family: $fontBase;
 
   @media screen and (min-width: 640px) {
     max-width: 250px;
@@ -109,23 +99,66 @@ $fontBase: Roboto, sans-serif;
   }
 }
 
+.box-select {
+  width: 98%;
+  padding-left: 10px;
+
+  @media screen and (min-width: 640px) {
+    max-width: 265px;
+  }
+
+  @media screen and (min-width: 940px) {
+    max-width: 94%;
+  }
+}
+
+.box-select, .box-input {
+  height: 40px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: $fontBase;
+}
+
 option {
   font-family: $fontBase;
   font-size: 14px;
   font-weight: bold;
 }
 
+.container-file {
+  width: 96%;
+  border: 1px gray solid;
+  border-radius: 5px;
+  padding: 5px;
+
+  @media screen and (min-width: 640px) {
+    max-width: 255px;
+  }
+
+  @media screen and (min-width: 940px) {
+    max-width: 90%;
+  }
+}
+
 .box-file {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 0 5px;
 }
 
 .txt-warning {
   font-size: 12px;
   font-weight: bold;
   margin: 10px 0 10px 0;
+
+  @media screen and (min-width: 640px) {
+    max-width: 250px;
+  }
+
+  @media screen and (min-width: 940px) {
+    max-width: 90%;
+  }
 }
 
 .btn-file {

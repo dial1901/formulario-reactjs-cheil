@@ -137,17 +137,20 @@ const Formulario = () => {
 
                         <div>
                             <div className="label-input">Adjunta tu boleta de pago (*)</div>
-                            <div className={"box-file"}>
-                                <label className={"btn-file"} htmlFor="filePicker">Examinar...</label>
-                                <label className={"input-file"} htmlFor="filePicker">{filename}</label>
-                                <input id="filePicker" type={"file"}
-                                       onChangeCapture={handleChange}
-                                       accept={".jpg, .png, .bmp, .tif, .pdf"}
-                                       {...register('archivo', {
-                                           required: true
-                                       })}
-                                       style={{display:"none"}}/>
+                            <div className={"container-file"}>
+                                <div className={"box-file"}>
+                                    <label className={"btn-file"} htmlFor="filePicker">Examinar...</label>
+                                    <label className={"input-file"} htmlFor="filePicker">{filename}</label>
+                                    <input id="filePicker" type={"file"}
+                                           onChangeCapture={handleChange}
+                                           accept={".jpg, .png, .bmp, .tif, .pdf"}
+                                           {...register('archivo', {
+                                               required: true
+                                           })}
+                                           style={{display:"none"}}/>
+                                </div>
                             </div>
+
                             <div className={"txt-warning"}>*Solo se podrá adjuntar un archivo con peso menor a 10MB en los formatos JPG, PNG, BMP, TIF, PDF.</div>
                             {errors.archivo?.type === 'required' && <div className={"txt-error"}>Debe seleccionar un archivo</div>}
                         </div>
